@@ -13,6 +13,13 @@ By completing this activity, students will:
 4. **Work with Docker Containers:** Understand how to use Docker to run and manage Hadoop components and transfer files between the host and container environments.
 5. **Analyze MapReduce Job Outputs:** Learn how to retrieve and interpret the results of a MapReduce job.
 
+
+PROJECT OVERVIEW:
+this project implements a wordcount using mapreduceand hadoop which are used to process the large distributed datasets.we also used dockers for containerized deployment
+
+approch and implementation:
+mapper:this mapper class proccesses the line into words in form of key value pairs like (word,1)
+reducer:this reducer sums up the values of same word by taking the count from mapper
 ## Setup and Execution
 
 ### 1. **Start the Hadoop Cluster**
@@ -118,3 +125,11 @@ To copy the output from HDFS to your local machine:
 3. Commit and push to your repo so that we can able to see your output
 
 now we can see the output folder has been created in shared-folder we can see the word count in the file named part-r-00000
+
+sample input :
+hello world hello hadoop
+
+sample output :
+hello : 2
+world : 1
+hadoop : 1
